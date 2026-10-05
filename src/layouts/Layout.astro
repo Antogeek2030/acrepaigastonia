@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Same-day AC repair in Gastonia, NC. Licensed technicians, upfront pricing, 24/7 emergency service. Serving Gaston County. Call +1 (704) 469-6658."
+} = Astro.props;
+
+const siteUrl = "https://acrepairgastonianc.com";
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="AC Repair Gastonia NC" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="US-NC" />
+    <meta name="geo.placename" content="Gastonia" />
+    <meta name="geo.position" content="35.2621;-81.1873" />
+    <meta name="ICBM" content="35.2621, -81.1873" />
+    
+    <title>{title}</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- LocalBusiness JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "AC Repair Gastonia NC",
+      "url": siteUrl,
+      "telephone": "+17044696658",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "503 E Franklin Blvd",
+        "addressLocality": "Gastonia",
+        "addressRegion": "NC",
+        "postalCode": "28054",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.2621,
+        "longitude": -81.1873
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Gastonia"
+      },
+      "priceRange": "$$",
+      "description": description
+    })} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
