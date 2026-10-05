@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -24,34 +26,23 @@ const canonical = new URL(Astro.url.pathname, siteUrl).href;
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="AC Repair Gastonia NC" />
     <meta property="og:locale" content="en_US" />
-    
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    
-    <!-- Geo / Local SEO -->
     <meta name="geo.region" content="US-NC" />
     <meta name="geo.placename" content="Gastonia" />
     <meta name="geo.position" content="35.2621;-81.1873" />
     <meta name="ICBM" content="35.2621, -81.1873" />
-    
     <title>{title}</title>
-    
-    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    
-    <!-- LocalBusiness JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "HVACBusiness",
@@ -77,15 +68,16 @@ const canonical = new URL(Astro.url.pathname, siteUrl).href;
         "opens": "00:00",
         "closes": "23:59"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "Gastonia"
-      },
+      "areaServed": { "@type": "City", "name": "Gastonia" },
       "priceRange": "$$",
       "description": description
     })} />
   </head>
   <body>
-    <slot />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

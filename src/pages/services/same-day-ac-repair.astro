@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = "+17044696658";
+const phoneDisplay = "+1 (704) 469-6658";
+---
+<Layout title="Same-Day AC Repair Gastonia NC | Fast AC Service | acrepairgastonianc.com" description="Same-day AC repair in Gastonia and Gaston County. Call in the morning, sleep in comfort that night. Call +1 (704) 469-6658.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / Services / Same-Day AC Repair</p>
+      <h1>Same-Day AC Repair in Gastonia, NC</h1>
+      <p>No multi-day waits. Call in the morning and sleep in comfort that night — available throughout Gaston County.</p>
+      <a href={`tel:${phone}`} class="btn btn-white btn-lg">Book Today — {phoneDisplay}</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-block">
+      <p>No multi-day waits. Our <strong>Same-Day AC Repair</strong> service means you call in the morning and sleep in comfort that night. Available throughout Gastonia and Gaston County for most standard residential repairs.</p>
+      <p>Stocked service vehicles and local dispatch from 503 E Franklin Blvd allow most common repairs — capacitors, contactors, thermostats, drain clearing, many refrigerant issues — to be completed on the first visit. Average response time is under an hour in much of Gaston County.</p>
+      <div class="cta-box">
+        <p>Need same-day AC repair?</p>
+        <a href={`tel:${phone}`} class="btn btn-primary btn-lg">Call {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

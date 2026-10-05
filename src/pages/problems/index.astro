@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = "+17044696658";
+const phoneDisplay = "+1 (704) 469-6658";
+---
+<Layout title="Common AC Problems Gastonia NC | Signs Your AC Needs Repair | acrepairgastonianc.com" description="Recognize common AC problems in Gastonia homes: frozen coils, warm air, weak airflow, leaks, noises. When to call for repair. Call +1 (704) 469-6658.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / AC Problems</p>
+      <h1>Common AC Problems in Gastonia Homes</h1>
+      <p>Recognize these signs? Gastonia heat and humidity accelerate wear — don't wait for a full breakdown.</p>
+      <a href={`tel:${phone}`} class="btn btn-white btn-lg">Get a Quote — {phoneDisplay}</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <a href="/problems/frozen-coils/" class="card">
+          <h3>Frozen Coils <span class="badge badge-danger">Urgent</span></h3>
+          <p>Ice on indoor or outdoor unit. Restricted airflow or refrigerant leak. Running a frozen AC damages the compressor.</p>
+        </a>
+        <a href="/problems/blowing-warm-air/" class="card">
+          <h3>Blowing Warm Air <span class="badge badge-danger">Urgent</span></h3>
+          <p>System runs but doesn't cool. Low refrigerant or failing compressor — true emergency in Gastonia summers.</p>
+        </a>
+        <a href="/problems/leaking-water/" class="card">
+          <h3>Leaking Water <span class="badge badge-danger">Urgent</span></h3>
+          <p>Water near the unit. Blocked condensate drain or melting ice. Mold risk and ceiling damage if ignored.</p>
+        </a>
+        <a href="/problems/weak-airflow/" class="card">
+          <h3>Weak Airflow <span class="badge badge-warn">Address Soon</span></h3>
+          <p>Low airflow from vents. Clogged filter, failing blower, or duct issues. Overloads the compressor if left alone.</p>
+        </a>
+        <a href="/problems/thermostat-issues/" class="card">
+          <h3>Thermostat Issues <span class="badge badge-warn">Address Soon</span></h3>
+          <p>Short-cycling, won't turn on, or ignores settings. Often an inexpensive, same-visit fix.</p>
+        </a>
+        <a href="/problems/strange-noises/" class="card">
+          <h3>Strange Noises <span class="badge badge-warn">Address Soon</span></h3>
+          <p>Banging, squealing, grinding. Loose hardware, worn bearings, or failing compressor.</p>
+        </a>
+      </div>
+      <div class="cta-box" style="margin-top:2rem">
+        <p>Seeing any of these signs? Don't wait for a full breakdown.</p>
+        <a href={`tel:${phone}`} class="btn btn-primary btn-lg">Call {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

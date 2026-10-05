@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = "+17044696658";
+const phoneDisplay = "+1 (704) 469-6658";
+---
+<Layout title="AC Making Strange Noises Gastonia NC | Banging Squealing | acrepairgastonianc.com" description="AC banging, squealing, or grinding in Gastonia? Loose hardware, worn bearings, or failing compressor. Call +1 (704) 469-6658.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Strange Noises</p>
+      <h1>Strange Noises From Your AC</h1>
+      <p>Banging, squealing, or grinding almost always means a component needs attention. Catching it early prevents larger failures.</p>
+      <a href={`tel:${phone}`} class="btn btn-white btn-lg">Call {phoneDisplay}</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-block">
+      <p><span class="badge badge-warn">Address Soon</span></p>
+      <ul>
+        <li><strong>Banging</strong> — often loose hardware or a failing compressor mount</li>
+        <li><strong>Squealing</strong> — worn belt or motor bearings</li>
+        <li><strong>Grinding</strong> — bearing failure in blower or condenser fan</li>
+        <li><strong>Rattling</strong> — debris in the outdoor unit or loose panels</li>
+      </ul>
+      <p>Unusual sounds should not be ignored, especially in peak cooling season. Related: <a href="/services/compressor-repair/">Compressor Repair</a>, <a href="/services/central-ac-repair/">Central AC Repair</a>.</p>
+      <div class="cta-box">
+        <a href={`tel:${phone}`} class="btn btn-primary btn-lg">Call {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,100 @@
+---
+const phone = "+17044696658";
+const phoneDisplay = "+1 (704) 469-6658";
+const address = "503 E Franklin Blvd, Gastonia, NC 28054";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">❄</span>
+      <strong>AC Repair Gastonia NC</strong>
+      <p>Same-day AC repair for Gastonia & Gaston County. Licensed, insured, and ready 24/7.</p>
+    </div>
+    <div class="footer-col">
+      <p><strong>Services</strong></p>
+      <a href="/services/emergency-ac-repair/">Emergency AC Repair</a>
+      <a href="/services/central-ac-repair/">Central AC Repair</a>
+      <a href="/services/mini-split-repair/">Mini-Split Repair</a>
+      <a href="/services/same-day-ac-repair/">Same-Day AC Repair</a>
+      <a href="/services/drain-line-cleaning/">Drain Line Cleaning</a>
+    </div>
+    <div class="footer-col">
+      <p><strong>Contact</strong></p>
+      <p>{address}</p>
+      <p><a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+      <p>24/7 Emergency Service</p>
+      <a href="/location/">View Map & Directions</a>
+    </div>
+    <div class="footer-col">
+      <p><strong>Service Area</strong></p>
+      <p>Gastonia · Belmont · Bessemer City · Cramerton · Dallas · Lowell · Stanley · Gaston County, NC</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {year} AC Repair Gastonia NC · acrepairgastonianc.com · All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href={`tel:${phone}`} class="float-call" aria-label="Call now">📞 Call Now</a>
+
+<style>
+  .footer {
+    background: var(--color-darker);
+    color: #94a3b8;
+    padding-top: 3rem;
+  }
+  .footer-inner {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 768px) {
+    .footer-inner { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  }
+  .footer-brand strong {
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  .footer-brand p { font-size: 0.9rem; }
+  .logo-icon { font-size: 1.5rem; color: var(--color-primary); }
+  .footer-col p, .footer-col a {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .footer-col strong {
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .footer-col a:hover { color: var(--color-primary-light); text-decoration: underline; }
+  .footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .float-call {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: var(--color-accent);
+    color: white;
+    font-weight: 700;
+    padding: 0.875rem 1.25rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4);
+    z-index: 99;
+    font-size: 0.95rem;
+  }
+  .float-call:hover { background: var(--color-accent-dark); }
+  @media (min-width: 960px) {
+    .float-call { display: none; }
+  }
+</style>

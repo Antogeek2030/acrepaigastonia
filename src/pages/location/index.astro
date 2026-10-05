@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = "+17044696658";
+const phoneDisplay = "+1 (704) 469-6658";
+const address = "503 E Franklin Blvd, Gastonia, NC 28054";
+---
+<Layout title="Location | AC Repair Gastonia NC | 503 E Franklin Blvd | acrepairgastonianc.com" description="Find us at 503 E Franklin Blvd, Gastonia, NC 28054. Map and directions for AC repair serving Gaston County. Call +1 (704) 469-6658.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / Location</p>
+      <h1>Our Location in Gastonia, NC</h1>
+      <p>Serving homeowners across Gaston County from 503 E Franklin Blvd.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;gap:1.5rem" class="loc-grid">
+        <div>
+          <address style="font-style:normal;font-size:1.15rem;margin-bottom:1rem;line-height:1.5">
+            <strong>503 E Franklin Blvd</strong><br />
+            Gastonia, NC 28054<br />
+            United States
+          </address>
+          <p style="margin-bottom:0.5rem"><a href={`tel:${phone}`} style="font-size:1.25rem;font-weight:700;color:var(--color-primary-dark)">{phoneDisplay}</a></p>
+          <p style="margin-bottom:1rem;color:var(--color-gray)">24/7 Emergency Service Available</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=503+E+Franklin+Blvd,+Gastonia,+NC+28054" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+          <p style="margin-top:1.5rem;font-size:0.95rem;color:var(--color-gray)">
+            <strong>Service area:</strong> Gastonia, Belmont, Bessemer City, Cramerton, Dallas, Lowell, Stanley, and all of Gaston County, NC.
+          </p>
+        </div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+          <iframe
+            title="Map of 503 E Franklin Blvd, Gastonia, NC 28054"
+            src="https://maps.google.com/maps?q=503+E+Franklin+Blvd,+Gastonia,+NC+28054&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;display:block;min-height:320px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    @media (min-width: 768px) {
+      .loc-grid { grid-template-columns: 1fr 1.5fr !important; align-items: start; }
+    }
+  </style>
+</Layout>
