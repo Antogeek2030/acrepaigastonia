@@ -27,7 +27,7 @@ Static Astro.js website for **acrepairgastonianc.com**, optimized for Cloudflare
 - Responsive, sticky header, floating call button on mobile
 - SEO: meta, OG, LocalBusiness JSON-LD, robots.txt, @astrojs/sitemap
 - Address: **503 E Franklin Blvd, Gastonia, NC 28054**
-- Phone: **+1 (704) 469-6658**
+- Phone: **+1 (607) 228-9269**
 
 ## Deploy to Cloudflare Pages
 
